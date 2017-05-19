@@ -1,11 +1,11 @@
 require 'fileutils'
-Dir.glob("C:/Users/mithilesh.singh/Desktop/Savan/python/Good_codes/**/*") do |fname|
+Dir.glob("source folderlocation/**/*") do |fname|
   if(File.file?(fname))
   a = fname.dup
-  a.slice! "C:/Users/mithilesh.singh/Desktop/Savan/python/Good_codes"
+  a.slice! "source folderlocation"
   b = File.dirname(a)
   fn = File.basename a  
-  dest = "C:/Users/mithilesh.singh/Desktop/ruby/copy" + b
+  dest = "Destination folderlocation" + b
   unless File.directory?(dest)
 	  FileUtils.mkdir_p(dest)
   end
